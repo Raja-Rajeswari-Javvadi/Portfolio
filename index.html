@@ -683,6 +683,67 @@
     .contact {
       font-size: 20px;
     }
+    #projects {
+  background-color: cornsilk;
+  color: black;
+  padding: 20px;
+}
+
+.projects-title {
+  font-size: 2em;
+  font-weight: 500;
+  font-family: Montserrat;
+  text-align: center;
+  background-color: pink;
+  margin-bottom: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project {
+  background-color: white;
+  border: 2px solid rgb(247, 210, 210);
+  box-shadow: 5px 5px 5px rgb(233, 225, 225), 5px 5px 5px rgb(211, 90, 90);
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+.project-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.project-description {
+  font-size: 1em;
+  color: gray;
+  margin-top: 10px;
+}
+
+.project-link {
+  display: block;
+  margin-top: 10px;
+  color: pink;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 
@@ -711,6 +772,7 @@
         <li><a href="#Education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#connect">Contact Me</a></li>
       </ul>
     </div>
@@ -834,6 +896,50 @@
       </div>
     </div>
   </div>
+  <!-- Projects Section -->
+<div class="projects" id="projects">
+  <div class="projects-title">Projects</div>
+
+  <div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project">
+      <div class="project-img"><a href="https://ik.imagekit.io/fu4uxhoyq/Bootstrap/btsshp.html?updatedAt=1736261079473">
+        <img src="https://ik.imagekit.io/fu4uxhoyq/vibemart.jpg?updatedAt=1736259269047" alt="Project 1">
+      </a> </div>
+      <div class="project-name">VIBECART</div>
+      <p class="project-description">
+        An e-commerce website that allows users to browse and purchase products. 
+        Implemented with HTML, CSS, and Bootstrap for the frontend.
+      </p>
+      <a href="https://github.com/RajiRjavvadi/Ecommerce-website" target="_blank" class="project-link">View on GitHub</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <div class="project-img"><a href="https://ik.imagekit.io/fu4uxhoyq/Bootstrap/restrnt.html?updatedAt=1736261542206">
+        <img src="https://ik.imagekit.io/fu4uxhoyq/restaurant%20img.jpg?updatedAt=1736259622968" alt="Project 2">
+      </a></div>
+      <div class="project-name">Restaurant</div>
+      <p class="project-description">
+        A website that allows users to book tables at a restaurant. Built using HTML and CSS with a focus on responsive design.
+      </p>
+      <a href="https://github.com/RajiRjavvadi/Restaurant-website" target="_blank" class="project-link">View on GitHub</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <div class="project-img">
+        <img src="https://ik.imagekit.io/fu4uxhoyq/prt.png?updatedAt=1736259995560" alt="Project 3">
+      </div>
+      <div class="project-name">My Portfolio</div>
+      <p class="project-description">
+        A simple to-do list app to manage tasks, built using HTML, CSS, and JavaScript.
+      </p>
+      <a href="https://github.com/RajiRjavvadi/Portfolio" target="_blank" class="project-link">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
   <div class="contact" id="connect">
     <p style="text-align: center;">
       <b>Connect with me at</b>
