@@ -105,7 +105,45 @@
         display: block;
       }
     }
+ #certifications {
+      padding: 2rem;
+      background-color: #ffe6ee;
+    }
 
+    
+
+    .certifications {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .certificate {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .certificate:hover {
+      transform: scale(1.05);
+    }
+
+    .certificate img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .certificate-name {
+      display: block;
+      font-weight: bold;
+      color: #d81b60;
+    }
     .intro {
       display: flex;
       flex-direction: column;
@@ -365,6 +403,91 @@
         color: white;
       }
     }
+    .resume-button {
+      padding: 0.6rem 1.2rem;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+
+    .resume-button:hover {
+      background-color: #c2185b;
+    }
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    background: linear-gradient(to right, #ffe6ec, #fff5f8);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .skill-group {
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .skill-group:hover {
+    transform: translateY(-5px);
+  }
+
+  .skill-button {
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    background: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+
+  .skill-button:hover {
+    background-color: #c2185b;
+    transform: scale(1.05);
+  }
+
+  .skill-list {
+    list-style: none;
+    margin-top: 0.8rem;
+    padding-left: 0;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .skill-list li {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    color: #444;
+    transition: transform 0.3s ease;
+  }
+
+  .skill-list li:hover {
+    transform: translateX(5px);
+    color: #e91e63;
+  }
+
+  .skill-group.active .skill-list {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
   </style>
 </head>
 
@@ -394,6 +517,7 @@
     <h1>Raja Rajeswari Javvadi</h1>
     <h2>I am a <span id="career">Web Developer</span></h2>
     <p>Final-year B.Tech CSE (Data Science) student with a strong foundation in programming (C, Python, Java) and proficiency in SQL database. Skilled in front-end technologies including HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS. Focused on enhancing Python expertise, actively pursuing certifications and internships, and seeking job opportunities to apply and expand my skills.</p>
+    <a class="resume-button" href="https://ik.imagekit.io/fu4uxhoyq/Raja%20Rajeswari%20Javvadi%20Resume.pdf?updatedAt=1746292418353" target="_blank">View My Resume</a>
   </section>
 
   <section id="education">
@@ -423,16 +547,69 @@
   </section>
 
   <section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="grid">
-      <div class="card skills"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
-      <div class="card skills"><i class="fab fa-css3-alt"></i><h3>CSS</h3></div>
-      <div class="card skills"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
-      <div class="card skills"><i class="fas fa-code"></i><h3>C</h3></div>
-      <div class="card skills"><i class="fab fa-java"></i><h3>Java</h3></div>
-      <div class="card skills"><i class="fab fa-python"></i><h3>Python</h3></div>
+  <h2 class="section-title" style="text-align:center; color:#e91e63; margin-top:2rem; font-size:2.5rem; font-family: 'Playfair Display', serif;">Skills</h2>
+  <div class="skills-container">
+    <div class="skill-group">
+      <button class="skill-button">Programming</button>
+      <ul class="skill-list">
+        <li>Python</li>
+        <li>C</li>
+        <li>Java</li>
+      </ul>
     </div>
-  </section>
+    <div class="skill-group">
+      <button class="skill-button">Web Technologies</button>
+      <ul class="skill-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <button class="skill-button">Frameworks</button>
+      <ul class="skill-list">
+        <li>Bootstrap</li>
+        <li>Tailwind</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <button class="skill-button">Libraries</button>
+      <ul class="skill-list">
+        <li>Numpy</li>
+        <li>Pandas</li>
+        <li>Matplotlib</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <button class="skill-button">Version Control</button>
+      <ul class="skill-list">
+        <li>GitHub</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <button class="skill-button">Developer Tools</button>
+      <ul class="skill-list">
+        <li>VSCode</li>
+        <li>Putty</li>
+        <li>CodeBlocks</li>
+        <li>Google Colab</li>
+        <li>Android Studio</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <button class="skill-button">Others</button>
+      <ul class="skill-list">
+        <li>SQL</li>
+        <li>MongoDB</li>
+        <li>MS Word</li>
+        <li>MS PowerPoint</li>
+        <li>MS Excel</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
 
   <section id="projects">
     <h2 class="section-title">Projects</h2>
@@ -471,31 +648,42 @@
     </div>
   </section>
 
-  <section id="certifications">
-    <h2 class="section-title">Certifications</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Android Development</h3>
-        <p>AICTE Virtual Internship Certificate</p>
+   <div id="certifications">
+    <div class="section-title">Certifications</div>
+    <div class="certifications">
+      <div class="certificate">
+        <a href="https://ik.imagekit.io/fu4uxhoyq/Google%20Android%20Virtual%20Internship.jpg?updatedAt=1728211163861" target="_blank">
+          <img src="https://ik.imagekit.io/fu4uxhoyq/Neutral%20Simple%20Minimalist%20Modern%20Gift%20Certificate%20Voucher%20(1).png?updatedAt=1740154154182" alt="Certification 3" />
+        </a>
+        <span class="certificate-name">Android Developer Certificate from AICTE</span>
       </div>
-      <div class="card">
-        <h3>AI-ML Internship</h3>
-        <p>Virtual Internship Certificate from AICTE</p>
+      <div class="certificate">
+        <a href="https://ik.imagekit.io/fu4uxhoyq/AIML%20Virtual%20Internship.jpg?updatedAt=1728211150762" target="_blank">
+          <img src="https://ik.imagekit.io/fu4uxhoyq/Neutral%20Simple%20Minimalist%20Modern%20Gift%20Certificate%20Voucher%20(2).png?updatedAt=1740154154294" alt="Certification 2" />
+        </a>
+        <span class="certificate-name">AI-ML engineer certificate from AICTE</span>
       </div>
-      <div class="card">
-        <h3>MongoDB Developer</h3>
-        <p>Certificate from Infosys Springboard</p>
+      <div class="certificate">
+        <a href="https://ik.imagekit.io/fu4uxhoyq/IMG_20241005_210020.jpg?updatedAt=1728142708548" target="_blank">
+          <img src="https://ik.imagekit.io/fu4uxhoyq/Neutral%20Simple%20Minimalist%20Modern%20Gift%20Certificate%20Voucher%20(3).png?updatedAt=1740154154451" alt="Certification 1" />
+        </a>
+        <span class="certificate-name">Mongodb developer certificate from Infosys Springboard</span>
       </div>
-      <div class="card">
-        <h3>Python for Data Science</h3>
-        <p>Certificate from IBM</p>
+      <div class="certificate">
+        <a href="https://ik.imagekit.io/fu4uxhoyq/IBM%20Certificatification_page-0001.jpg?updatedAt=1738639598415" target="_blank">
+          <img src="https://ik.imagekit.io/fu4uxhoyq/Neutral%20Simple%20Minimalist%20Modern%20Gift%20Certificate%20Voucher%20(4).png?updatedAt=1740154154400" alt="Certification 1" />
+        </a>
+        <span class="certificate-name">Python for Data Science Certificate from IBM</span>
       </div>
-      <div class="card">
-        <h3>Data Analytics Job Simulation</h3>
-        <p>Certificate from Deloitte</p>
+      <div class="certificate">
+        <a href="https://ik.imagekit.io/fu4uxhoyq/Deloitte%20Virtual%20internship%20certificate_page-0001.jpg?updatedAt=1740666300882" target="_blank">
+          <img src="https://ik.imagekit.io/fu4uxhoyq/Neutral%20Simple%20Minimalist%20Modern%20Gift%20Certificate%20Voucher%20(5).png?updatedAt=1740666858023" alt="Certification 1" />
+        </a>
+        <span class="certificate-name">Data Analytics Job Simulation Certificate from Deloitte</span>
       </div>
     </div>
-  </section>
+  </div>
+
 
   <section id="contact" class="contact-section">
     <h2 class="section-title">Connect With Me</h2>
@@ -563,6 +751,16 @@
       document.getElementById("career").innerText = roles[index];
       index = (index + 1) % roles.length;
     }, 2000);
+    document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.skill-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const parent = button.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  });
   </script>
 </body>
 
